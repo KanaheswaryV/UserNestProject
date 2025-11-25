@@ -1,0 +1,75 @@
+/* Navbar Section */
+.frontnavbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  background-image: url('/Images/birds.png');
+  width: 50px;
+  height: 50px;
+}
+
+.site-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;         /* full screen height */
+  width: 200%;           /* full width */
+}
+
+.hero-text {
+  flex: 1;                /* left side takes half width */
+  padding: 60px;
+  background-color: #dde4f1; /* optional background */
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #eb9d9d;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-text button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.hero-text button:hover {
+  background-color: #0056b3;
+}
+
+/* right side image section */
+.hero-image {
+  flex:1;
+  background-image: url('/Images/UserNestAppImage.jpg'); /* right-side background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 91vh;
+}
