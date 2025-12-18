@@ -10,6 +10,7 @@ const Sidebar = () => {
 
       <a href="/home" className="btn btn-primary mb-3">Home</a>
       <a href="/user" className="btn btn-primary mb-3">User</a>
+      <a href="/feedback" className="btn btn-primary mb-3">FeedBack</a>
     </div>
   );
 };

@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useContext } from "react";
+import UserContext from "../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Logout = () => {
-const navigate = useNavigate()
+  const { dispatch } = useContext(UserContext);
+  const navigate = useNavigate();
 
-useEffect(()=>{
-  navigate("/login")
-}, [navigate])
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+    navigate("/login");
+  };
 
-  return null
-}
+  return <button onClick={handleLogout}>Logout</button>;
+};
 
-export default Logout
+export default Logout;

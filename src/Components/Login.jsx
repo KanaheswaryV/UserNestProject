@@ -1,17 +1,36 @@
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import UserContext from '../context/UserContext';
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Login = () => {
 const navigate =useNavigate()
+//const {setUser} = useContext(UserContext)
+const {dispatch} = useContext(UserContext)
+
 const [username, setUsername] = useState("")
 const [password, setPassword] = useState("")
 
 const handleSubmit =(e)=>{
 e.preventDefault()
+
+// setUser({
+//   username : username,
+//   password: password
+// })
+
+dispatch({
+  type: "LOGIN",
+  payload: {
+    username,
+    password
+  }
+})
+
 alert("Form submitted")
 
-navigate("/home")
+navigate("/feedback")
 }
 
   return (

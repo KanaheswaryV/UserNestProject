@@ -1,16 +1,22 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, useRoutes } from "react-router-dom";
 import routes from "./routes";
 
 const RoutesHandler = () => {
   return (
     <BrowserRouter>
-      <Routes>
+      {/* <Routes>
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
-      </Routes>
+      </Routes> */}
+      <RenderRoutes />
     </BrowserRouter>
   );
+};
+
+const RenderRoutes = () => {
+  const element = useRoutes(routes);
+  return element;
 };
 
 export default RoutesHandler;

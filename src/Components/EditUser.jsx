@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 
 const EditUser = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  // const location = useLocation()
+  // console.log(location)
 
-  const [user, setUser] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: ""
+  const [user, setUser] = useState({firstName: "", lastName: "", email: "", phone: ""
   });
 
   useEffect(() => {
@@ -46,49 +44,29 @@ const EditUser = () => {
 
         <div className="mb-3">
           <label className="form-label">First Name</label>
-          <input
-            name="firstName"
-            className="form-control"
-            value={user.firstName}
-            onChange={handleChange}
-            required
+          <input name="firstName" className="form-control" value={user.firstName} onChange={handleChange} required
           />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Last Name</label>
-          <input
-            name="lastName"
-            className="form-control"
-            value={user.lastName}
-            onChange={handleChange}
-            required
+          <input name="lastName" className="form-control" value={user.lastName} onChange={handleChange} required
           />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Email</label>
-          <input
-            name="email"
-            className="form-control"
-            value={user.email}
-            onChange={handleChange}
-            required
+          <input name="email" className="form-control" value={user.email} onChange={handleChange} required
           />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Phone</label>
-          <input
-            name="phone"
-            className="form-control"
-            value={user.phone}
-            onChange={handleChange}
-            required
+          <input name="phone" className="form-control" value={user.phone} onChange={handleChange} required
           />
         </div>
 
-        <button className="btn btn-primary">Save Changes</button>
+        <button type="submit" className="btn btn-primary">Save Changes</button>
       </form>
     </div>
   );
